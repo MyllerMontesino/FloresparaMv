@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Feliz 21 de Septiembre</title>
+</head>
+
+<body>
+   
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+
+.button {
+    display: inline-block; /* Para centrar el botón */
+    margin: 20px; /* Espaciado alrededor del botón */
+}
+
+.botones {
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+    animation: heartbeat 1.5s infinite; /* Efecto de latido */
+}
+
+.botones:hover {
+    animation: none; /* Detiene la animación al pasar el mouse */
+}
+
+.botones a {
+    background-color: #f6c605;
+    padding: 9px;
+    border-radius: 80px;
+    color: #000; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumento del tamaño */
+    }
+}
+
+
+.description{
+    margin: 1.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+   
+
+}
+
+.description span {
+    font-size: 26px; /* Tamaño base para pantallas más grandes */
+
+}
+
+.description P {
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    .description span {
+        font-size: 20px; /* Tamaño para tabletas o pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .description span {
+        font-size: 23px; /* Tamaño para teléfonos */
+        
+    }
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
+
+        .greetings {
+            font-size: 2em;
+            color: #f6c605; /* Color rosa */
+            white-space: nowrap; /* Evita el salto de línea */
+            overflow: hidden; /* Esconde el texto extra */
+            border-right: .15em solid; /* Cursor tipo máquina de escribir */
+            animation: blink-caret 0.75s step-end infinite; /* Efecto de parpadeo */
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #f6c605; }
+        }
+    </style>
+</head>
+<body>
+    <div class="greetings" id="greetings"></div>
+
+    <div class="greetings" id="greetings"></div>
+
+    <script>
+        const text = "Hola Wuapaa 🫶";
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                document.getElementById("greetings").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 200); // Ajusta el tiempo para la velocidad de aparición
+            } else {
+                setTimeout(reset, 1000); // Espera 1 segundo antes de reiniciar
+            }
+        }
+
+        function reset() {
+            index = 0;
+            document.getElementById("greetings").innerHTML = ""; // Limpia el texto
+            type(); // Comienza de nuevo
+        }
+
+        type();
+    </script>
+    <div class="description">
+        <span>ESTE DETALLE ES PARA TI, CON MUCHO CARIÑO...</span><br>
+        <p>By: Myller Montesino M.</p>
+    </div>
+    <div class="button">
+        <button class="botones">
+            <a href="flower.html" style="color: #000;">ÁBRELO AQUÍ</a>
+        </button>
+    </div>
+
+</body>
+
+</html>
